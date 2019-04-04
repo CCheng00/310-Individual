@@ -47,6 +47,19 @@ JenDatabaseQueryTechniques.getFeeling(userMessage) - associates userMessage with
 
 neural_net_response.getResponse(sOrQ,userInput, subject, questionNum) - uses input to query the SQL database for the appropriate response using the neural net
 
+EntityRecognition.java - uses openNLP in order to recognize named entities from the user input
+
+Synonyms.py - uses wordnet, and natural language toolkit in order to generate a large number of keywords that we can use for processing emotion
+
+wordProcess - readies the entity recognition functions and the preprocessed synonyms
+
+Implemented features since assignment 2:
+  - Entity recognition
+      - finds named entities in user input so they aren't considered for keywords (for example ("Dead Sea") will be recognized as an             entity and therefore the 'Dead' keyword won't be called)
+  - Synonym finding
+      - uses the openNLP database to find synonyms for our keywords (rather than an assortment of hand picked keywords, we used a               database to find a broader amount)
+      
+
 
 
 
