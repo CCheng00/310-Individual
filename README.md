@@ -63,7 +63,8 @@ Implemented features since assignment 2:
       - uses the openNLP database to find synonyms for our keywords (rather than an assortment of hand picked keywords, we used a               database to find a broader amount)
       - https://imgur.com/a/pITdkM2 <- Can be seen here, 'void' was previously not a keyword in the older version, it has been added using a synoynym finding algorithm and 'NLP'
   - Porter Stemmer
-    - Removes endings to words, generifiying them, for example, 'overwhelming' will be generified to 'overwhelm' for the purpose of gathering keywords
+    - Removes endings to words, generifiying them, for example, 'lacking' will be generified to 'lack' for the purpose of gathering keywords
+    - https://i.imgur.com/v2tCU0e <- Porter stemmer turns 'lacking' to 'lack' which is a keyword associated with emptiness
 
 
 
