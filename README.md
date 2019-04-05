@@ -51,14 +51,19 @@ EntityRecognition.java - uses openNLP in order to recognize named entities from 
 
 Synonyms.py - uses wordnet, and natural language toolkit in order to generate a large number of keywords that we can use for processing emotion
 
-wordProcess - readies the entity recognition functions and the preprocessed synonyms
+wordProcess.py - readies the entity recognition functions and the preprocessed synonyms
+
+porterStemmer.py - applies the porter stemmer algorithm to generify user input
 
 Implemented features since assignment 2:
   - Entity recognition
       - finds named entities in user input so they aren't considered for keywords (for example ("Dead Sea") will be recognized as an             entity and therefore the 'Dead' keyword won't be called)
+      - https://imgur.com/a/oUKLFUR <- Can be seen here, Therapist Jen respects no keyword even though "dead" is normally a keyword for suicidal, as "Dead Sea" is recognized as a named entity
   - Synonym finding
       - uses the openNLP database to find synonyms for our keywords (rather than an assortment of hand picked keywords, we used a               database to find a broader amount)
-      
+      - https://imgur.com/a/pITdkM2 <- Can be seen here, 'void' was previously not a keyword in the older version, it has been added using a synoynym finding algorithm and 'NLP'
+  - Porter Stemmer
+    - Removes endings to words, generifiying them, for example, 'overwhelming' will be generified to 'overwhelm' for the purpose of gathering keywords
 
 
 
