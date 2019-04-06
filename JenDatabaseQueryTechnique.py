@@ -1,20 +1,15 @@
 import pyodbc
 import re
+import wordProcess
 
 server = "sql04.ok.ubc.ca"
 database = "db_jlabossi"
 username = "jlabossi"
 password = "23976160"
 
-feelingType = {
-        "overwhelmed": ["overwhelm", "grieve", "damage", "overwrought", "concern", "alarm", "astonish", "baffle"],
-        "sad" : ["sad", "bitter", "dismal", "heartbroken", "mournful", "somber", "sorry", "wistful", "despair", "distress", "down", "hurt", "glum", "gloomy", "grieve", "heartsick", "heavyheart", "morbid", "forlorn"],
-        "angry" : ["angry","annoyed", "bitter", "enraged", "exasperated", "furious", "heated", "indignant", "offend", "resent", "sullen", "uptight", "irritate", "irratable", "mad", "fuming", "huffy", "infuriate", "raging", "rage", "sulky", "sore", "incense"],
-        "empty" : ["bare", "blank", "desert", "devoid", "dry", "hollow", "empty", "abandoned", "dead", "deflate", "deplete", "exhausted", "lacking", "lack", "vacate", "void"],
-        "suicidal" : ["dangerous", "suicide", "suicidal", "destructive", "destruct", "kill myself", "kill me", "dead"],
-        "scared" : ["scared", "scare", "afraid", "fearful", "fear", "scare", "startle", "petrified", "petrify", "shaken", "terrified", "terrify", "aghast"],
-        "anxious" : ["anxious", "apprehensive", "concern", "concerned", "distressed", "distress", "fidget", "jittery", "nervous", "restless", "uneasy", "uptight", "aghast", "antsy", "disturb", "fretful", "hyper", "jumpy", "shaking", "shiver", "troubled", "wired"],
-    }
+
+feelingType = wordProcess.synList()
+
 
 
 def getResponse(sOrQ, feeling, subject, questionNum):

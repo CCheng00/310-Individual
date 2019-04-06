@@ -2,7 +2,7 @@ import os
 import JenDatabaseQueryTechnique
 import cherrypy
 import parsingStringFunctions
-
+import wordProcess
 PATH = os.path.abspath(os.path.dirname(__file__))
 
 sOrQ = "statement"
@@ -26,7 +26,7 @@ class Root(object):
         global questionNum
         #if this isnt the first message, check if the user asked a question
         if questionNum != 1 or subject != "normal":
-            userInput = data.get("userInput")
+            userInput = wordProcess.trim(data.get("userInput"))
             isQuestion = parsingStringFunctions.questionOrStatement(userInput)
             #if the user asked a question, reset
             if(isQuestion == "question"):
@@ -37,11 +37,12 @@ class Root(object):
                 sOrQ = "statement"
         #if its after greetings,  if you are being asked if you a suicidial, check the user feeling, or if its the start of a new distinct topic
         if (questionNum == 2) or (questionNum == 7 and subject == "normal") or (questionNum == 3 and subject != "normal"):
-            userInput = data.get("userInput")
+            userInput = wordProcess.trim(data.get("userInput"))
+
             feeling = JenDatabaseQueryTechnique.getFeeling(userInput)
             #if you are being asked to change topics, check what the user wants
         if (subject == "normal" and questionNum == 8) or (subject == "goal" and questionNum == 7) or (subject =="negative" and questionNum == 7):
-            userInput = data.get("userInput")
+            userInput = wordProcess.trim(data.get("userInput"))
             #if the subject changed, go back to question 1 for that subject
             oldSubject = subject
             subject = parsingStringFunctions.negativeThoughtsOrGoals(userInput)

@@ -1,0 +1,7 @@
+overwhelmed: overwhelm grieve damage overwrought concern alarm astonish baffle
+sad: sad bitter dismal heartbroken mournful somber sorry wistful despair distress down hurt glum gloomy grieve heartsick heavyheart morbid forlorn
+angry: angry annoyed bitter enraged exasperated furious heated indigant offend resent sullen uptight irritate irritable mad fuming huffy infuriate raging rage sulky sore incense
+empty: bare blank desert devoid dry hollow empty abandoned dead deflate deplete exhausted lacking lack vacate void
+suicidal: dangerous suicide suicidal destructive destruct kill dead
+scared: scared scare afraid fearful fear startle petrified petrify shaken terrified aghast
+anxious: anxious apprehensive concern concerned distressed distress fidget jittery nervous restless uneasy uptight aghast astsy disturb fretful hyper jumpy shaking shiver troubled wired
